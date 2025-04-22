@@ -1,0 +1,58 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+
+
+html * {
+    font-family: var.$primary-font;
+}
+ 
+body {
+    max-width: var.$max-body;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+    font-size: 18px;
+    background-color: var.$color-grey-bg;
+    &::before {
+        content:'';
+        position: absolute;
+        width: 1102px;
+        height: 1102px;
+        border: 1px solid rgba(var.$color-elipse-bg, 0.3);
+        border-radius: 50%;
+        top: 21%;
+        left: 49.7%;
+        z-index: -100;
+    }
+    &::after {
+        content:'';
+        position: absolute;
+        width: 850px;
+        height: 850px;
+        border: 1px solid rgba(var.$color-elipse-bg, 0.3);
+        border-radius: 50%;
+        top: 48%;
+        left: 62%;
+        z-index: -100;
+    }
+} 
+
+.container {
+    max-width: var.$max-container;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var.$title-font;
+}
+
+.btn {
+    @include mix.button;
+}
+

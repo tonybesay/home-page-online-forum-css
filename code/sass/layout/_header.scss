@@ -1,0 +1,60 @@
+@use '../abstracts/variables' as var;
+
+.header {
+    margin: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__navbar {
+        margin-right: 100px;
+        ul{
+            display: flex;
+            gap: 48px;
+            a {
+                color: var.$color-grey;
+                position: relative;
+                &.active{
+                    color: var.$color-white;
+                    &::before{
+                        content:'';
+                        width:  28px;
+                        height: 4px;
+                        position: absolute;
+                        bottom: -15px;
+                        left: 0;
+                        background-color: var.$color-pink;
+                        border-radius: 20px;
+
+                    }
+                    &:hover {
+                        &::before{
+                            content:'';
+                            width:  100%;
+                            height: 4px;
+                            position: absolute;
+                            bottom: -15px;
+                            left: 0;
+                            background-color: var.$color-pink;
+                            border-radius: 20px;
+                            transition: all 0.2s ease;
+                        }
+                    }
+                }
+                &:hover {
+                    color: var.$color-white;
+                    &::before{
+                        content:'';
+                        width:  100%;
+                        height: 4px;
+                        position: absolute;
+                        bottom: -15px;
+                        left: 0;
+                        background-color: var.$color-pink;
+                        border-radius: 20px;
+                        transition: all 0.2s ease;
+                    }
+                }
+            }
+        }
+    }
+}

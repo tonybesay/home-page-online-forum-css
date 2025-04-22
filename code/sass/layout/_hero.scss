@@ -1,0 +1,107 @@
+@use '../abstracts/variables' as var;
+
+.main__hero{
+    margin-top: 50px;
+    display: flex;
+    &__content{
+        width: 70%;
+        &__title {
+            margin-top: 100px;
+            color: var.$color-white;
+            font-size: 80px;
+            width: 95%;
+        }
+        &__subtitle {
+            margin-top: 24px;
+            color: var.$color-grey;
+            font-size: 24px;
+            font-weight: 300;
+            width: 85%;
+        }
+        &__buttons {
+            margin-top: 32px;
+
+            .link {
+                margin-left: 16px;
+                padding: 16px 16px;
+                border-radius: 10px 10px 10px 0;
+                color: var.$color-white;
+                text-decoration: underline;
+                position: relative;
+                font-weight: 400;
+                img {
+                    position: relative;
+                    top: 15px;
+                }
+                &:hover {
+                    border: 1px solid var.$color-pink;
+                    background-color: var.$color-pink-btn-hover;
+                }
+            }
+        }
+        &__features {
+            margin-top: 144px;
+            margin-bottom: 144px;
+            display: flex;
+            justify-content: space-between;
+            color: var.$color-white;
+            width: 80%;
+            &__container{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                img{
+                    padding: 12px;
+                    background-color: rgb(var.$color-white, 0.25);
+                    border-radius: 20px;
+                }
+                p {
+                    font-weight: 500;
+                    width: 60%;
+                }
+            }
+        }
+    }
+    &__imgs {
+        display: grid;
+        gap: 32px;
+        width: 50%;
+        height: 90%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        &__serious-guy {
+            background-color: var.$color-purple;
+            border-radius: 90px;
+            grid-column: 1;
+            grid-row: 1 / span 2;
+        }
+        &__smily-woman {
+            background-color: var.$color-blue-light;
+            border-radius: 90px;
+            grid-column: 2;
+            grid-row: 1;
+        }
+        &__orange-glasses-guy {
+            background-color: var.$color-orange;
+            border-radius: 90px;
+            grid-column: 2;
+            grid-row: 2 / span 2;
+        }
+        &__sun-glasses-woman{
+            background-color: var.$color-yellow;
+            border-radius: 90px;
+            grid-column: 3;
+            grid-row: 2 / span 2;
+            position: relative;
+            bottom: 24%;
+            right: 0;
+        }
+        &__thinkin-woman {
+            background-color: var.$color-pink;
+            border-radius: 90px;
+            grid-column: 1;
+            grid-row: 3;
+        }
+    }
+}
+

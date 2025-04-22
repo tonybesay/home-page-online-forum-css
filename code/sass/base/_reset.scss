@@ -1,0 +1,14 @@
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/variables' as vars;
+
+* {
+  @include mix.reset;
+}
+
+ul{
+  @include mix.reset-list;
+}
+
+a {
+  text-decoration: none;
+}
