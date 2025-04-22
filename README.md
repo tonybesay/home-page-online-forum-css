@@ -6,7 +6,7 @@ Template de un header y un hero de home page.
 
 ## 🚀 Demo
 
-https://tudemo.com](https://tonybesay.github.io/home-page-online-forum-css/
+https://tonybesay.github.io/home-page-online-forum-css/
 
 ## 📸 Captura
 
